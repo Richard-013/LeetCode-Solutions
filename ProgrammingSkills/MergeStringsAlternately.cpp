@@ -8,38 +8,28 @@
 class Solution {
 public:
     string mergeAlternately(string word1, string word2) {
-        bool word1Small;
-
-        if (word1.length() > word2.length()) {
-            word1Small = false;
-        } else {
-            word1Small = true;
-        }
-
         string mergedWord = "";
+        short int word1Length = word1.length();
+        short int word2Length = word2.length();
 
-        if (word1Small) {
-            int length = word1.length();
-            for (int i = 0; i < length; i++) {
+        if (word1Length > word2Length) {
+            for (int i = 0; i < word2Length; i++) {
                 mergedWord += word1[i];
                 mergedWord += word2[i];
             }
 
-            if (word2.length() > word1.length()) {
-                for (int i = length; i < word2.length(); i++) {
-                    mergedWord += word2[i];
-                }
+            for (int i = word2Length; i < word1Length; i++) {
+                mergedWord += word1[i];
             }
         } else {
-            int length = word2.length();
-            for (int i = 0; i < length; i++) {
+            for (int i = 0; i < word1Length; i++) {
                 mergedWord += word1[i];
                 mergedWord += word2[i];
             }
 
-            if (word1.length() > word2.length()) {
-                for (int i = length; i < word1.length(); i++) {
-                    mergedWord += word1[i];
+            if (word1Length != word2Length) {
+                for (int i = word1Length; i < word2Length; i++) {
+                    mergedWord += word2[i];
                 }
             }
         }
