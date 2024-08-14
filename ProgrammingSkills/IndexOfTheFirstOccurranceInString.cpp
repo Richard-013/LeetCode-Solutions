@@ -9,28 +9,22 @@ public:
         int needleLength = needle.length();
         bool found = false;
 
-        for (int i = 0; i < haystack.length(); i++)
-        {
-            if(haystack[i] != needle[0])
-            {
+        for (int i = 0; i < haystack.length(); i++) {
+            if (haystack[i] != needle[0]) {
                 continue;
             }
 
-            for(int j = 0; j < needleLength; j++)
-            {
-                if(haystack[i+j] != needle[j])
-                {
+            for (int j = 0; j < needleLength; j++) {
+                if (haystack[i + j] != needle[j]) {
                     break;
                 }
 
-                if(j == needleLength - 1)
-                {
+                if (j == needleLength - 1) {
                     found = true;
                 }
             }
 
-            if(found)
-            {
+            if (found) {
                 index = i;
                 break;
             }
