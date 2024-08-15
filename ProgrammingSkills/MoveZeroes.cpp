@@ -6,32 +6,27 @@
 class Solution {
 public:
     void moveZeroes(vector<int>& nums) {
-        int numSize = nums.size();
-        int endpoint = numSize-1;
-    
-        for(int i = 0; i < numSize; i++)
-        {
-            if(nums[i] == 0)
-            {
-                for(int j = i; j <= endpoint; j++)
-                {
-                    if (j == endpoint)
-                    {
-                        nums[j] = 0;
-                    }
-                    else
-                    {
-                        nums[j] = nums[j+1];
-                    }
-                }
-                
-                endpoint--;
-                i--;
-                
-                if(i >= endpoint)
-                {
-                    break;
-                }
+        if (&nums.front() == &nums.back()) {
+            return;
+        }
+
+        int* left = &nums[0];
+        int* right = &nums[1];
+        int* end = &nums.back();
+
+        while (right != end + 1) {
+            if (*left != 0) {
+                left = right;
+                right++;
+                continue;
+            } else if (*right == 0) {
+                right++;
+                continue;
+            } else {
+                *left = *right;
+                *right = 0;
+                left++;
+                right++;
             }
         }
     }
