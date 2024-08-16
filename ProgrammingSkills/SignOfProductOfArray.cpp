@@ -1,4 +1,14 @@
 /*
+* Result:
+*
+* Runtime: 0ms
+* Beats: 100.00%
+*
+* Memory: 12.77 MB
+* Beats: 49.85%
+*
+* Problem:
+*
 * There is a function signFunc(x) that returns:
 *    1 if x is positive.
 *    -1 if x is negative.

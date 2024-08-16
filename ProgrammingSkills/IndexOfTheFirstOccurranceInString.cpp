@@ -1,4 +1,14 @@
 /*
+* Result:
+*
+* Runtime: 0 ms
+* Beats: 100.00%
+*
+* Memory: 7.78 MB
+* Beats: 65.85%
+*
+* Problem:
+*
 * Given two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
 */
 
