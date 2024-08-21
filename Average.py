@@ -34,7 +34,7 @@ readmeLines = []
 with open("C:\\Users\\Richard\\Documents\\GitHub\\LeetCode-Solutions\\README.md", 'r') as readmeFile:
     readmeLines = readmeFile.readlines()
 
-readmeLines[10] = "Average **Runtime** beats " + str(averageRuntimePercentage) + "% of other submissions.\n"
+readmeLines[10] = "Average **Runtime** beats " + str(averageRuntimePercentage) + "% of other submissions.\n\n"
 readmeLines[11] = "Average **Memory Usage** beats " + str(averageMemoryPercentage) + "% of other submissions.\n"
 
 with open("C:\\Users\\Richard\\Documents\\GitHub\\LeetCode-Solutions\\README.md", 'w') as readmeFile:

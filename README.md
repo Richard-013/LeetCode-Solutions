@@ -9,4 +9,5 @@ Results are taken from the last run of the code in the file as reported by leetc
 ## Average Results
 
 Average **Runtime** beats 73.47% of other submissions.
+
 Average **Memory Usage** beats 45.76% of other submissions.
